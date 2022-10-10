@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+    <title>LifeLabs Group 2 Sitio Bebe</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="mySlides">
+      <div class="header">
+        <h1>Chosen Youtube Category</h1>
+      </div>
+      <br><br>
+        <p>&#8594; Video Podcasts</p>
+        <p>&#8594; Why? Well, it keeps people company. And even though it says “video” podcast,<br>
+            the main focus here is just us talking about our topic. So really, people can listen<br>
+            to it no matter what they’re doing. Bored? Listen to our podcast. Busy yet needs<br>
+            something to play in the background? Listen to our podcast. Waiting in a long, boring<br>
+            queue? Listen to our podcast. Not only can it be listened to by a wide variety of people<br>
+            (may it be young people to adults) in various occasions, it’s also a light hearted way<br>
+            to share the situation regarding Sitio Bebe. Video podcasts are also informative as they<br>
+            discuss topics. This way, we can present more about their issue and the fundraising for it.<br><br></p>
+    </div>
+
+    <div class="mySlides">
+      <div class="header">
+        <h1>Target Audience</h1>
+      </div>
+      <br><br>
+        <p>&#8594; We have a couple audiences our content is targetted to:<br>
+          <li>
+            Podcast enjoyers<br>
+          </li>
+          <li>High schoolers</li>
+          <li>Young adults (aged between 18 to 35)</li>
+        </p>
+
+        <p>
+          &#8594; Those people are our target audiences because we think that with our content,<br>
+          we can satisfy their needs. The audience (podcast enjoyers), needs a good podcast to<br>
+          listen to while still being informative. The audience (young adults) needs something<br>
+          that helps become aware and also something that can engage them (and who knows, since<br>
+          they’re already young adults, they might be interested in practically helping out which<br>
+          is a win-win :D). The audience (high schoolers) needs some sort of sources to become<br>
+          aware and alert around the things that’s happening to them aside from unnecessary from<br>
+          the internet.<br><Br>
+        </p>
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br><br><br>
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+
+  
+
+  <style>
+  h1 {
+  animation: color-change 4s infinite;
+}
+
+@keyframes color-change {
+  0% { color: #F2D388; }
+  50% { color: #874C62; }
+  100% { color: #F2D388; }
+}
+
+    body {
+  background: #A7D2CB;
+  margin: 0%;
+    }
+
+    .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #874C62;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: #C98474;
+  color: #F2D388;
+}
+.dot-container {
+  text-align: center;
+  padding: 10px;
+}
+
+/* margin top needs to be fixed */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 3px;
+  margin-top: fixed; 
+  background-color: #874C62;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #C98474;
+}
+
+p {
+  font-family: "Calibri";
+  font-size: 20px;
+  margin-left: 190px;
+}
+li {
+  font-family:'Calibri';
+  font-size: 20px;
+  margin-left: 190px;
+}
+h1 {
+  text-align: center;
+}
+.header {
+  padding: 50px;
+  text-align: center;
+  background: #C98474;
+  color: #F2D388;
+  font-size: 30px;
+  font-family: "Raleway";
+}
+
+
+  </style>
+
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+
+
+
+
+</body>
